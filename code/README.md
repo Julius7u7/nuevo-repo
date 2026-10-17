@@ -1,9 +1,18 @@
-# Código
+# Análisis Box-Jenkins del EMBIG Colombia
 
-Coloca aquí el código fuente de tu proyecto. Puedes organizarlo por lenguaje o por módulos, por ejemplo:
+El script `box_jenkins_embi.py` carga el Excel `base de datos/Datos_EMBI.xlsx` desde la
+raíz del proyecto, convierte la serie diaria a trimestral y ejecuta el análisis
+ARIMA. No depende de la carpeta desde la que se inicia Python.
 
-- code/python/
-- code/node/
-- code/java/
+Desde la raíz del proyecto, ejecútalo con:
 
-Agrega aquí un README específico para tu stack si quieres.
+```powershell
+python code\box_jenkins_embi.py
+```
+
+El script genera las gráficas en `code/resultados_embi/`. Necesita `pandas`,
+`openpyxl`, `matplotlib`, `numpy`, `scipy` y `statsmodels`; pueden instalarse con:
+
+```powershell
+python -m pip install pandas openpyxl matplotlib numpy scipy statsmodels
+```

@@ -16,7 +16,7 @@ from statsmodels.tsa.stattools import adfuller, kpss
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 BASE_DIR = SCRIPT_DIR.parent
-ARCHIVO = BASE_DIR / "database" / "Datos_EMBI.xlsx"
+ARCHIVO = BASE_DIR / "base de datos" / "Datos_EMBI.xlsx"
 SALIDA = SCRIPT_DIR / "resultados_embi"
 DIA_CORTE = 1
 ORDEN = (1, 1, 1)
@@ -24,7 +24,7 @@ ORDEN = (1, 1, 1)
 if not ARCHIVO.is_file():
     raise FileNotFoundError(
         f"No se encontró el archivo de datos: {ARCHIVO}. "
-        "Verifica que database/Datos_EMBI.xlsx esté dentro del proyecto."
+        "Verifica que base de datos/Datos_EMBI.xlsx esté dentro del proyecto."
     )
 
 SALIDA.mkdir(parents=True, exist_ok=True)
