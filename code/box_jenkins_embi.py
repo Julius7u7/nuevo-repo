@@ -19,7 +19,7 @@ BASE_DIR = SCRIPT_DIR.parent
 ARCHIVO = BASE_DIR / "base de datos" / "Datos_EMBI.xlsx"
 SALIDA = SCRIPT_DIR / "resultados_embi"
 DIA_CORTE = 1
-ORDEN = (1, 1, 1)
+ORDEN = (0, 1, 2)  # Modelo con menor AIC entre ARIMA(p,1,q), p,q = 0..3
 
 if not ARCHIVO.is_file():
     raise FileNotFoundError(
